@@ -13,14 +13,14 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div>
-      <NavigationMenu>
+    <div className='navbar-wrapper'>
+      <NavigationMenu className="flex justify-center">
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <NavigationMenuLink>Link</NavigationMenuLink>
-            </NavigationMenuContent>
+          <NavigationMenuItem className='navbar-menu-item'>
+            <NavigationMenuLink>Products</NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem className='navbar-menu-item'>
+            <NavigationMenuLink>Posts</NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

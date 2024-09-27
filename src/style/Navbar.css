@@ -2,12 +2,15 @@
     background-color: rgb(23, 23, 23);
 }
 .navbar-menu-item{
-    margin: 20px 10px;
+    margin: 15px 10px;
     color:rgb(236, 236, 236);
     cursor: pointer;
+    transition: 0.2s ease;
+    border-radius: 2px;
 }
 
 .navbar-menu-item:hover{
     background-color: rgb(220, 221, 212);
     color: black;
+    transition: 0.2s ease;
 }

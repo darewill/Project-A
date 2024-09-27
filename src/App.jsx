@@ -1,11 +1,42 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar.jsx';
+import React from "react";
+import "./App.css";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar.jsx";
+import Posts from "./components/Posts";
+import Products from "./components/Products";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-export default function App() {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  )
-}
+function App() {
+  const Homepage = () => {
+    return (
+      <div>
+        <Navbar />
+      </div>
+    );
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Homepage />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/products",
+          element: <Products />,
+        },
+        {
+          path: "/posts",
+          element: <Posts />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
+};
+
+export default App;

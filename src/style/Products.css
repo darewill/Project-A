@@ -1,0 +1,13 @@
+.products-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin-top: 10px;
+    padding: 30px;
+}
+.products-item{
+    transition: 0.2s ease;
+}
+.products-item:hover{
+    background-color: rgb(126, 126, 126);
+    transition: 0.3s ease;
+}

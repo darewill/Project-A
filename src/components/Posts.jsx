@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faTags, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-
+import '../style/Posts.css';
 export default function Posts() {
   const [posts, setPosts] = useState([]);
 

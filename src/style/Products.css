@@ -11,3 +11,22 @@
     background-color: rgb(126, 126, 126);
     transition: 0.3s ease;
 }
+
+@media (max-width: 1779px){
+    .products-grid{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 1280px){
+    .products-grid{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 768px){
+    .products-grid{
+        grid-template-columns: auto;
+    }
+}
+

@@ -14,3 +14,15 @@
     color: black;
     transition: 0.2s ease;
 }
+
+@media (max-width: 1779px){
+    .navbar-items{
+        margin-left: 42.5%;
+    }
+}
+
+@media (max-width: 1280px){
+    .navbar-wrapper{
+        justify-content: space-between;
+    }
+}

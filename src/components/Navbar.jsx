@@ -19,7 +19,7 @@ export default function Navbar() {
       <Link to="/">
         <img src={Logo} className="h-[80px] ml-[35%]" />
       </Link>
-      <div className="ml-[42.5%]">
+      <div className="navbar-items ml-[42.5%]">
       <NavigationMenu className="item-container">
         <NavigationMenuList>
           <NavigationMenuItem className="navbar-menu-item p-[10px]">

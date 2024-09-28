@@ -4,13 +4,14 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar.jsx";
 import Posts from "./components/Posts";
 import Products from "./components/Products";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 
 function App() {
   const Homepage = () => {
     return (
       <div>
         <Navbar />
+        <Outlet />
       </div>
     );
   };

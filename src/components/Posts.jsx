@@ -20,8 +20,9 @@ export default function Posts() {
       <ul className=''>
         {posts.map((post)=>(
           <li key={post.id} className='my-[40px] bg-[#171717] p-[40px] rounded-lg'>
-            <h2 className='text-2xl font-bold mb-[20px]'>{post.title}</h2>
+            <h2 className='text-2xl font-bold mb-[20px] capitalize'>{post.title}</h2>
             <p className='font-semibold'>{post.body}</p>
+            <hr className='m-[20px]'/>
             <div className='inline-flex my-[5px]'>
                 <p className='mx-[10px]'><FontAwesomeIcon icon={faThumbsUp}/> : {post.reactions.likes}</p>
                 <p className='mx-[10px]'><FontAwesomeIcon icon={faThumbsDown} /> : {post.reactions.dislikes}</p>

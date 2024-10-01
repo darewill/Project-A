@@ -1,5 +1,7 @@
 .navbar-wrapper{
     background-color: rgb(23, 23, 23);
+    position: sticky;
+    top: 0;
 }
 .navbar-menu-item{
     margin: 15px 10px;

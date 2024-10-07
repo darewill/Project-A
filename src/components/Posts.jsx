@@ -6,26 +6,28 @@ import { Button } from "@/components/ui/button";
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
-  const [visible, setVisible] = useState(5);
+  const [skip, setSkip] = useState(0);
+  const limit = 5;
 
   useEffect(()=>{
     const fetchPosts = async () => {
-      const response = await fetch('https://dummyjson.com/posts');
+      const response = await fetch(`https://dummyjson.com/posts?limit=${limit}&skip=${skip}`);
       const data = await response.json();
-      setPosts(data.posts);
+      setPosts(prevPost => [...prevPost, ...data.posts]);
     };
     fetchPosts();
-  }, []);
+  }, [skip]);
 
-  const showMore = () => {
-    setVisible((prevValue) => prevValue + 5);
+  const loadMore = () =>{
+    setSkip(prevSkip => prevSkip + limit);
   };
+
 
   return (
     <div className='posts-wrapper flex flex-col text-center w-[700px] mx-[auto] my-[10px] text-[#eeece2]'>
       <h1 className='text-3xl my-[20px]'>Posts</h1>
       <ul className=''>
-        {posts.slice(0,visible).map((post)=>(
+        {posts.map((post)=>(
           <li key={post.id} className='my-[40px] bg-[#171717] p-[40px] rounded-lg'>
             <h2 className='text-2xl font-bold mb-[20px] capitalize'>{post.title}</h2>
             <p className='font-semibold'>{post.body}</p>
@@ -39,9 +41,7 @@ export default function Posts() {
           </li>
         ))}
       </ul>
-      {visible < posts.length && (
-        <Button variant="secondary" className='flex m-[auto] mb-[40px] bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2' onClick={showMore}>Load More</Button>
-      )}
+        <Button variant="secondary" className='flex m-[auto] mb-[40px] bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2' onClick={loadMore}>Load More</Button>
       </div>
   )
 }

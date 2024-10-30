@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar.jsx";
 import Posts from "./components/Posts";
 import Products from "./components/Products";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import Login from "./components/Login";
 
 function App() {
   const Homepage = () => {
@@ -34,6 +35,10 @@ function App() {
           element: <Posts />,
         },
       ],
+    },
+    {
+      path: "/login",
+      element: <Login />
     },
   ]);
 

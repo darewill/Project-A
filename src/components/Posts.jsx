@@ -24,11 +24,11 @@ export default function Posts() {
 
 
   return (
-    <div className='posts-wrapper flex flex-col text-center w-[700px] mx-[auto] my-[10px] text-[#eeece2]'>
-      <h1 className='text-3xl my-[20px]'>Posts</h1>
+    <div className='posts-wrapper flex flex-col text-center w-[700px] mx-[auto] my-[10px] text-[#404040]'>
+      <h1 className='text-3xl my-[20px] '>Posts</h1>
       <ul className=''>
         {posts.map((post)=>(
-          <li key={post.id} className='my-[40px] bg-[#171717] p-[40px] rounded-lg'>
+          <li key={post.id} className='my-[40px] bg-white p-[40px] rounded-lg'>
             <h2 className='text-2xl font-bold mb-[20px] capitalize'>{post.title}</h2>
             <p className='font-semibold'>{post.body}</p>
             <hr className='m-[20px]'/>

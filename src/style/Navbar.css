@@ -1,11 +1,11 @@
 .navbar-wrapper{
-    background-color: rgb(23, 23, 23);
+    background-color: white;
     position: sticky;
     top: 0;
 }
 .navbar-menu-item{
     margin: 15px 10px;
-    color:#eeece2;
+    color:#404040;
     cursor: pointer;
     transition: 0.2s ease;
     border-radius: 2px;

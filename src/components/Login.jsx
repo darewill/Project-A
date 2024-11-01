@@ -56,7 +56,7 @@ export default function Login() {
         Don't have an account?
       </h1>
       <Link to="/signup">
-        <h1 className="text-[#4855b7] text-[20px] font-bold ">Sign Up</h1>
+        <h1 className="text-[#4855b7] text-[20px] font-bold ">Register</h1>
       </Link>
     </div>
     </div>

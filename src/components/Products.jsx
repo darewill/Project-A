@@ -22,11 +22,11 @@ export default function Products() {
   };
   
   return (
-    <div className='products-wrapper text-[#eeece2]'>
-      <h1 className='text-3xl mt-[30px] flex justify-center text-[#404040]'>Products</h1>
+    <div className='products-wrapper text-[#404040]'>
+      <h1 className='text-3xl mt-[30px] flex justify-center'>Products</h1>
       <ul className='products-grid'>
         {products.map((product)=>(
-          <li key={product.id} className='products-item m-[30px] flex flex-col text-center items-center bg-[#171717] font-bold '>
+          <li key={product.id} className='products-item m-[30px] flex flex-col text-center items-center bg-white font-bold '>
             <h2 className='mt-[30px] text-xl whitespace-nowrap overflow-hidden text-ellipsis max-w-[300px]'>{product.title}</h2>
             <p className='mt-[5px]'>Price: {product.price}$</p>
             <img src={product.thumbnail} alt={product.title} className='mt-[10px]'/>

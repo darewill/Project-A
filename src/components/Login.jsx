@@ -17,7 +17,7 @@ export default function Login() {
     if (storedUser && storedUser.email === email && storedUser.password === password) {
       alert("Login successful!");
       localStorage.setItem("isLoggedIn", "true");
-      navigate("/"); // Redirect to the home page or dashboard
+      navigate("/");
     } else {
       setError("Invalid credentials");
     }
@@ -47,8 +47,8 @@ export default function Login() {
       <Button
         onClick={handleLogin}
         variant="secondary"
-        className="login-btn mt-[20px] rounded w-[100px] shadow-md"
-      >
+          className="lgn-btn mt-[20px] rounded w-[100px] shadow-md"
+        >
         Login
       </Button>
       <hr className="mt-[30px] bg-[#c3c2c2] w-[350px] h-[2px]" />

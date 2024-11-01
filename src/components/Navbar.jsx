@@ -13,17 +13,15 @@ export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  // Check login status from local storage
   useEffect(() => {
     const loggedInStatus = localStorage.getItem("isLoggedIn");
     setIsLoggedIn(loggedInStatus === "true");
   }, [localStorage.getItem("isLoggedIn")]);
 
-  // Handle logout
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     setIsLoggedIn(false);
-    navigate("/login"); // Redirect to login page after logout
+    navigate("/login");
   };
 
   return (

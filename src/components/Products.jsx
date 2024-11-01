@@ -23,7 +23,7 @@ export default function Products() {
   
   return (
     <div className='products-wrapper text-[#eeece2]'>
-      <h1 className='text-3xl mt-[30px] flex justify-center'>Products</h1>
+      <h1 className='text-3xl mt-[30px] flex justify-center text-[#404040]'>Products</h1>
       <ul className='products-grid'>
         {products.map((product)=>(
           <li key={product.id} className='products-item m-[30px] flex flex-col text-center items-center bg-[#171717] font-bold '>
@@ -33,7 +33,7 @@ export default function Products() {
           </li>
         ))}
       </ul>
-      <Button variant="secondary" className='flex m-[auto] mb-[40px] bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2 ' onClick={loadMore}>Load More</Button>
+      <Button variant="secondary" className='flex m-[auto] shadow-md mb-[40px] bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 px-4 py-2 ' onClick={loadMore}>Load More</Button>
       </div>
   )
 }

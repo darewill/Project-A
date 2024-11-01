@@ -41,7 +41,7 @@ export default function Posts() {
           </li>
         ))}
       </ul>
-        <Button variant="secondary" className='flex m-[auto] mb-[40px] bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2' onClick={loadMore}>Load More</Button>
+        <Button variant="secondary" className='flex m-[auto] mb-[40px] bg-secondary text-secondary-foreground shadow-md hover:bg-secondary/80 h-9 px-4 py-2' onClick={loadMore}>Load More</Button>
       </div>
   )
 }

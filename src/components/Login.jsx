@@ -24,7 +24,7 @@ export default function Login() {
   };
 
   return (
-    <div className='h-[600px] bg-[url("https://static.vecteezy.com/system/resources/previews/024/658/862/non_2x/3d-male-character-standing-confused-and-working-on-a-laptop-free-png.png")] bg-no-repeat bg-[length:32%] bg-[top_-2.5rem_left_12rem]'>
+    <div className='lgn-bg h-[600px] bg-[url("https://static.vecteezy.com/system/resources/previews/024/658/862/non_2x/3d-male-character-standing-confused-and-working-on-a-laptop-free-png.png")] bg-no-repeat bg-[length:32%] bg-[top_-2.5rem_left_12rem]'>
     <div className="login-wrapper flex justify-center flex-col items-center mt-[150px]">
       <h1 className="text-[#0e0e0e] text-[32px] font-bold mb-[15px] cursor-default">
         Log In to Your Account

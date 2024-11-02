@@ -24,7 +24,7 @@ export default function Signup() {
   };
 
   return (
-    <div className='h-[600px] bg-[url("https://static.vecteezy.com/system/resources/previews/024/658/912/large_2x/3d-male-character-pointing-left-with-confidence-free-png.png")] bg-no-repeat bg-[length:32%] bg-[top_-2.5rem_left_12rem]'>
+    <div className='sgn-bg h-[600px] bg-[url("https://static.vecteezy.com/system/resources/previews/024/658/912/large_2x/3d-male-character-pointing-left-with-confidence-free-png.png")] bg-no-repeat bg-[length:32%] bg-[top_-2.5rem_left_12rem]'>
       <div className="lgn-wrapper flex justify-center flex-col items-center mt-[150px]">
         <h1 className="text-[#0e0e0e] text-[32px] font-bold mt-[80px] mb-[15px] cursor-default">
           Create a New Account

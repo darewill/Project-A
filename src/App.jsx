@@ -7,7 +7,7 @@ import Products from "./components/Products";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import ProtectedRoute from "./components/ProtectedRoute";
+
 
 function App() {
   const Homepage = () => {
@@ -22,7 +22,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <ProtectedRoute><Homepage /></ProtectedRoute>,
+      element: <Homepage />,
       children: [
         {
           path: "/",

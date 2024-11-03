@@ -5,3 +5,10 @@
 body{
     background-color: var(--color-bg);
 }
+
+.finished{
+    color:green;
+}
+.notFinished{
+    color: red;
+}

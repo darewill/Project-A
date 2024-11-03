@@ -9,9 +9,8 @@ import { Invoice } from './Invoice';
 export default function Home() {
 
   return (
-    <div className="home-wrapper flex justify-center mt-[40px] mr-[10px] ml-[10px]">
-      <div className="home-tabs bg-white m-[15px] h-[100%] w-[15%] rounded-md"><Leftbar /></div>
-      <div className="home- bg-white m-[15px] w-[85%] h-[730px] rounded-md"><Invoice /></div>
+    <div className="home-wrapper ">
+      <h1>This is the homepage</h1>
     </div>
   )
 }

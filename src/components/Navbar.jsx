@@ -8,6 +8,7 @@ import {
 } from "./ui/navigation-menu";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Leftbar from "./Leftbar";
 
 export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -58,6 +59,7 @@ export default function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
+      
     </div>
   );
 }

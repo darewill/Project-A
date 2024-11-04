@@ -21,7 +21,7 @@ function App() {
         <div className="left-bar home-tabs bg-white m-[15px] h-[100%] w-[15%] rounded-md">
           <Leftbar />
         </div>
-        <div className="main-content home- bg-white m-[15px] w-[85%] h-[730px] rounded-md">
+        <div className="main-content home- bg-white m-[15px] w-[100%] h-[100%] rounded-md">
           <Outlet />
         </div>
         </div>

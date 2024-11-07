@@ -18,7 +18,7 @@ function App() {
           <Navbar />
         </div>
         <div className="main-center flex justify-center mt-[40px] mr-[10px] ml-[10px]">
-        <div className="left-bar home-tabs bg-white m-[15px] h-[100%] w-[15%] rounded-md p-[15px]">
+        <div className="left-bar home-tabs bg-white m-[15px] h-[100%] w-[15%] rounded-md p-[5px]">
           <Leftbar />
         </div>
         <div className="main-content home- bg-white m-[15px] w-[100%] h-[100%] rounded-md flex justify-center p-[50px]">

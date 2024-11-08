@@ -57,19 +57,19 @@ const invoices = [
 export function Invoice() {
   return (
     <Table>
-      <TableCaption className='text-xl mb-[20px]'>A list of recent invoices.</TableCaption>
+      <TableCaption className='text-[35px] mb-[50px]'>A list of recent invoices.</TableCaption>
       <TableHeader>
-        <TableRow className='m-[20px]'>
-          <TableHead className="w-[100px]">Invoice</TableHead>
-          <TableHead>Status</TableHead>
+        <TableRow>
+          <TableHead className="text-left p-[10px] font-bold">Invoice</TableHead>
+          <TableHead className=''>Status</TableHead>
           <TableHead>Method</TableHead>
-          <TableHead className="text-right">Amount</TableHead>
+          <TableHead className="text-right font-bold">Amount</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {invoices.map((invoice) => (
-          <TableRow key={invoice.invoice}>
-            <TableCell className="font-medium">{invoice.invoice}</TableCell>
+          <TableRow key={invoice.invoice} className="hover:bg-[#f3f3f3] hover:transition-colors">
+            <TableCell className="font-medium pl-[10px] pt-[10px]">{invoice.invoice}</TableCell>
             <TableCell>{invoice.paymentStatus}</TableCell>
             <TableCell>{invoice.paymentMethod}</TableCell>
             <TableCell className="text-right">{invoice.totalAmount}</TableCell>
@@ -78,8 +78,8 @@ export function Invoice() {
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell colSpan={3}>Total</TableCell>
-          <TableCell className="text-right">$2,500.00</TableCell>
+          <TableCell colSpan={3} className="pl-[10px] pt-[15px] text-xl">Total</TableCell>
+          <TableCell className="text-right text-xl">$2,500.00</TableCell>
         </TableRow>
       </TableFooter>
     </Table>

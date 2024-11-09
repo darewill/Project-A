@@ -9,6 +9,7 @@ import Products from "./components/Products";
 import Signup from "./components/Signup";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Leftbar from "./components/Leftbar";
+import Users from "./components/Users";
 
 function App() {
   const Homepage = () => {
@@ -50,6 +51,10 @@ function App() {
         {
           path: "/invoice",
           element: <Invoice />,
+        },
+        {
+          path: "/users",
+          element: <Users />,
         },
       ],
     },

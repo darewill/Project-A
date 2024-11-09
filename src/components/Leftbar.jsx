@@ -10,9 +10,9 @@ const menuItems = [
     path: '/invoice'
   },
   {
-    title: "test",
-    icon: 'test',
-    path: '/'
+    title: "Users",
+    icon: 'users',
+    path: '/users'
   }
 ];
 

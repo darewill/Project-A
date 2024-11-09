@@ -1,0 +1,14 @@
+.leftbar-item.active{
+    background-color: #ffffff4a;
+    border-radius: 5%;
+}
+
+.leftbar-item:hover{
+    background-color: #ffffff4a;
+    transition: 0.2s ease;
+    border-radius: 5%;
+}
+
+.leftbar-item{
+    transition: 0.2s ease;
+}

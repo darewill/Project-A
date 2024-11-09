@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../style/Leftbar.css';
-import { Invoice } from './Invoice';
 import { Link } from 'react-router-dom';
 
 const menuItems = [
@@ -17,12 +16,21 @@ const menuItems = [
 ];
 
 export default function Leftbar() {
-  const menuComponents = menuItems.map((item)=>(
+
+  const [activeItem, setActiveItem] = useState(null);
+
+  const handleItemClick = (index) => {
+    setActiveItem(index);
+  };
+  const menuComponents = menuItems.map((item, index)=>(
     <Link to={item.path}>
-      <div className="menu-item mb-[5px] text-l h-[100%] text-[#d0d0d0] focus:bg-slate-50 hover:text-white hover:transition-colors flex mx-[30px] p-[5px] rounded items-center">
+      <div className={`leftbar-item ${activeItem === index ? 'active' : ''}`} 
+        onClick={() => handleItemClick(index)}>
+      <div className="menu-item mb-[5px] text-l h-[100%] text-white hover:transition-colors flex mx-[30px] p-[5px] rounded items-center">
         <span>
           {item.icon}
         </span>
+      </div>
       </div>
     </Link>
   ));
@@ -32,9 +40,9 @@ export default function Leftbar() {
       <p className="p-[5px] my-[5px] text-sm ml-[5px] text-[#ffffff] font-semibold">Dashboards</p>
         {menuComponents}
         <p className="p-[5px] my-[5px] text-sm ml-[5px] text-[#ffffff] font-semibold">Charts</p>
-        {menuComponents}
+        
         <p className="p-[5px] my-[5px] text-sm ml-[5px] text-[#ffffff] font-semibold">Charts</p>
-        {menuComponents}
+        
     </div>
   )
 }

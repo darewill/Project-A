@@ -2,7 +2,7 @@
 
 import { Bar, BarChart } from "recharts"
 
-import { ChartConfig, ChartContainer } from "../components/ui/chart"
+import {  ChartContainer } from "../components/ui/chart"
 
 
 const chartData = [
@@ -14,18 +14,7 @@ const chartData = [
   { month: "June", desktop: 214, mobile: 140 },
 ]
 
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "#2563eb",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "#60a5fa",
-  },
-} satisfies ChartConfig
-
-export function Component() {
+export default function Component() {
   return (
     <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
       <BarChart accessibilityLayer data={chartData}>

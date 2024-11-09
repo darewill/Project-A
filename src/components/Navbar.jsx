@@ -37,11 +37,6 @@ export default function Navbar() {
                 <NavigationMenuLink>Products</NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem className="navbar-menu-item p-[10px]">
-              <Link to="/posts">
-                <NavigationMenuLink>Posts</NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
             {isLoggedIn ? (
               <NavigationMenuItem className="navbar-menu-item p-[10px]">
                 <button onClick={handleLogout} className="text-red-500">

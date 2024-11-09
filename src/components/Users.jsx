@@ -43,16 +43,16 @@ export default function Users() {
   return (
     <div>
       <div className="flex justify-center">
-      <h1 className=" m-auto text-[25px] pl-[50px]">Users</h1>
+      <h1 className=" m-auto text-[25px] pl-[50px]">List of Users</h1>
       <h1 className="m-[20px] text-[25px] text-[#8d8d8d]">{currentPage}</h1>
       </div>
       <ul className="columns-2">
         {users.map((user) => (
           <li>
-            <div className="users-wrapper text-center bg-[#f3f3f3] p-[30px] mb-[20px] rounded-xl hover:bg-[#7bd78c] transition-colors ">
+            <div className="users-wrapper text-center bg-[#f3f3f3] p-[30px] mb-[20px] rounded-xl hover:bg-[#dbdbdb] transition-colors ">
               <div className="user-info flex flex-col mr-[10px] items-center mb-[20px]">
-                <p>{user.username}</p>
-                <h2 className="">
+                <p className="text-[#525252] italic font-semibold">@{user.username}</p>
+                <h2 className="text-[20px] font-semibold">
                   {user.firstName} {user.lastName}
                 </h2>
                 <h2 className="">{user.email}</h2>

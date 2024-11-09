@@ -19,7 +19,7 @@ const menuItems = [
 export default function Leftbar() {
   const menuComponents = menuItems.map((item)=>(
     <Link to={item.path}>
-      <div className="menu-item mb-[5px] text-l h-[35px] text-[#d0d0d0] hover:text-white hover:transition-colors flex mx-[30px] p-[5px] rounded items-center">
+      <div className="menu-item mb-[5px] text-l h-[100%] text-[#d0d0d0] focus:bg-slate-50 hover:text-white hover:transition-colors flex mx-[30px] p-[5px] rounded items-center">
         <span>
           {item.icon}
         </span>

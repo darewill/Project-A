@@ -14,11 +14,11 @@ function App() {
   const Homepage = () => {
     return (
       <div className="main-wrapper">
-        <div className="main-header ">
+        <div className="main-header">
           <Navbar />
         </div>
         <div className="main-center flex justify-center mt-[40px] mr-[10px] ml-[10px]">
-        <div className="left-bar home-tabs bg-gradient-to-b from-[#22ba5c] to-[#55bb21] m-[15px] h-[100%] w-[15%] rounded-md p-[5px]">
+        <div className="left-bar sticky top-20 home-tabs bg-gradient-to-b from-[#22ba5c] to-[#55bb21] m-[15px] h-[750px] w-[15%] rounded-md p-[5px]">
           <Leftbar />
         </div>
         <div className="main-content home- bg-white m-[15px] w-[100%] h-[100%] rounded-md flex justify-center p-[50px]">

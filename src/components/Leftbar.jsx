@@ -19,9 +19,9 @@ const menuItems = [
 
 const menuItems2 = [
   {
-    title: "Chart",
-    icon: "Chart",
-    path: '/chart'
+    title: "Visitors",
+    icon: "Visitors",
+    path: '/visitors'
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Leftbar() {
 
   const charts = menuItems2.map((item, index)=>(
     <Link to={item.path}>
-      <div className={`leftbar-item ${activeItem === index ? 'active' : ''}`} 
+      <div className={`leftbar-item ${activeItem === index ? 'active2' : ''}`} 
         onClick={() => handleItemClick(index)}>
       <div className="menu-item mb-[5px] text-l h-[100%] text-white hover:transition-colors flex mx-[30px] p-[5px] rounded items-center">
         <span>
@@ -65,7 +65,6 @@ export default function Leftbar() {
         {dashboards}
         <p className="p-[5px] my-[5px] text-sm ml-[5px] text-[#ffffff] font-semibold"><FontAwesomeIcon icon={faChartSimple} /> Charts</p>
         {charts}
-        <p className="p-[5px] my-[5px] text-sm ml-[5px] text-[#ffffff] font-semibold">Charts</p>
         
     </div>
   )

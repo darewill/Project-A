@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar.jsx";
 import Posts from "./components/Posts";
 import Products from "./components/Products";
 import Signup from "./components/Signup";
-import Chart from "./components/Chart";
+import Visitors from "./components/Visitors";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Leftbar from "./components/Leftbar";
 import Users from "./components/Users";
@@ -58,8 +58,8 @@ function App() {
           element: <Users />,
         },
         {
-          path: "/chart",
-          element: <Chart />,
+          path: "/visitors",
+          element: <Visitors />,
         },
       ],
     },

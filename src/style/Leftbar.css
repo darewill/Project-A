@@ -2,6 +2,10 @@
     background-color: #ffffff4a;
     border-radius: 5px;
 }
+.leftbar-item.active2{
+    background-color: #ffffff4a;
+    border-radius: 5px;
+}
 
 .leftbar-item:hover{
     background-color: #ffffff4a;

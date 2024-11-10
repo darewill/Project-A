@@ -15,7 +15,7 @@ export default function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try{
-      localStorage.setItem("user", JSON.stringify({email, password}));
+      localStorage.setItem("user", JSON.stringify({email, password, firstname}));
       alert("Registration successful!");
       navigate('/login');
     } catch (err){

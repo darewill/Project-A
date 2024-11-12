@@ -138,19 +138,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="home-mid bg-[#f3f3f3] rounded-lg  items-start justify-center w-[500px] m-auto h-[400px]">
+      <div className="home-mid bg-[#f3f3f3] rounded-lg w-[50%] h-[51%] items-start justify-center my-[30px] mx-auto ">
         <div className="mid-top flex justify-center">
-        <img src='https://img.goodfon.com/original/1728x972/1/2b/eystrahorn-beach-iceland-more-bereg.jpg' className='w-[100%] h-[200px] rounded-xl'/>
-        <Avatar className='h-[150px] w-[150px] absolute mt-[100px]'>
+        <img src='https://img.goodfon.com/original/1728x972/1/2b/eystrahorn-beach-iceland-more-bereg.jpg' className='h-[200px] w-[100%] rounded-t-xl'/>
+        <Avatar className='h-[150px] w-[150px] absolute mt-[100px] rounded-full'>
           <AvatarImage src="https://github.com/shadcn.png"/>
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         </div>
         <div className="mid-btm mt-[55px] text-center">
-          <p>ADMIN</p>
-          <h1>@{username}</h1>
-        <h1>{email}</h1>
-        <h1>{firstname} {lastname}</h1>
+          <p className='text-[#05bc08] font-bold'>ADMIN</p>
+          <h1 className='text-[#7c7c7c] italic text-[18px]'>@{username}</h1>
+        <h1 className='font-semibold'>{email}</h1>
+        <h1 className='font-semibold'>{firstname} {lastname}</h1>
         </div>
         
       </div>

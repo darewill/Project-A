@@ -9,6 +9,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { TrendingUp } from "lucide-react";
 import { Label, Pie, PieChart } from "recharts";
+import Calendar from '../components/Calendar';
 
 const chartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
@@ -48,7 +49,7 @@ export default function Home() {
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
-
+  
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (userData) {
@@ -128,7 +129,7 @@ export default function Home() {
           </Card>
         </div>
         <div className="home-right bg-[#f3f3f3] w-[500px] rounded-lg m-[20px] justify-center items-center flex flex-col">
-          <h1 className="text-[30px] font-semibold  text-[#595959] mb-[10px]">
+          <h1 className="text-[30px] font-semibold  text-[#2c80eb] mb-[10px]">
             Welcome {firstname}
           </h1>
           <p className="text-[25px] font-semibold  text-[#595959] w-[400px]">
@@ -138,7 +139,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="home-mid bg-[#f3f3f3] rounded-lg w-[50%] h-[51%] items-start justify-center my-[30px] mx-auto ">
+      <div className="home-mid bg-[#f3f3f3] rounded-lg w-[50%] items-start justify-center my-[30px] mx-auto ">
         <div className="mid-top flex justify-center">
         <img src='https://img.goodfon.com/original/1728x972/1/2b/eystrahorn-beach-iceland-more-bereg.jpg' className='h-[200px] w-[100%] rounded-t-xl'/>
         <Avatar className='h-[150px] w-[150px] absolute mt-[100px] rounded-full'>
@@ -152,7 +153,6 @@ export default function Home() {
         <h1 className='font-semibold'>{email}</h1>
         <h1 className='font-semibold'>{firstname} {lastname}</h1>
         </div>
-        
       </div>
     </div>
   );

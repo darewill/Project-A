@@ -11,6 +11,7 @@ import Visitors from "./components/Visitors";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Leftbar from "./components/Leftbar";
 import Users from "./components/Users";
+import Calendar from "./components/Calendar";
 
 function App() {
   const Homepage = () => {
@@ -60,6 +61,10 @@ function App() {
         {
           path: "/visitors",
           element: <Visitors />,
+        },
+        {
+          path: "/calendar",
+          element: <Calendar />,
         },
       ],
     },

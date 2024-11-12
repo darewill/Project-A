@@ -15,6 +15,11 @@ const menuItems = [
     icon: 'Users',
     path: '/users'
   },
+  {
+    title: "Calendar",
+    icon: 'Calendar',
+    path: '/calendar'
+  },
 ];
 
 const menuItems2 = [

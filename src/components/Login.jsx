@@ -5,8 +5,8 @@ import { Button } from "./ui/button";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault();
     const storedUser = JSON.parse(localStorage.getItem("user"));
 
-    if (storedUser && storedUser.email === email && storedUser.password === password) {
+    if (storedUser && storedUser.username === username && storedUser.password === password) {
       alert("Login successful!");
       localStorage.setItem("isLoggedIn", "true");
       navigate("/");
@@ -31,10 +31,10 @@ export default function Login() {
       </h1>
       {error && <p className="text-red-500">{error}</p>}
       <Input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
         className="login-inp from-indigo-500 outline-none m-[10px] w-[300px] rounded "
       />
       <Input

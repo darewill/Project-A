@@ -1,32 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../style/Home.css";
-import { Link } from 'react-router-dom';
 import { Card, CardContent, CardFooter } from "../components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "../components/ui/chart";
-import {
-  TrendingUp,
-  Calculator,
-  Calendar,
-  CreditCard,
-  Settings,
-  Smile,
-  User,
-} from "lucide-react";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
-} from "../components/ui/command"
-
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
+import { TrendingUp } from "lucide-react";
 import { Label, Pie, PieChart } from "recharts";
 
 const chartData = [
@@ -64,12 +45,18 @@ const chartConfig = {
 
 export default function Home() {
   const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (userData) {
       const parsedUser = JSON.parse(userData);
       setFirstname(parsedUser.firstname);
+      setLastname(parsedUser.lastname);
+      setEmail(parsedUser.email);
+      setUsername(parsedUser.username);
     }
   }, []);
 
@@ -78,127 +65,95 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-    <div className="home-wrapper flex">
-      <div className="home-left mr-[400px]">
-        <Card className="flex flex-col">
-          <CardContent className="flex-1 pb-0">
-            <ChartContainer
-              config={chartConfig}
-              className="mx-auto aspect-square max-h-[250px]"
-            >
-              <PieChart>
-                <ChartTooltip
-                  cursor={false}
-                  content={<ChartTooltipContent hideLabel />}
-                />
-                <Pie
-                  data={chartData}
-                  dataKey="visitors"
-                  nameKey="browser"
-                  innerRadius={60}
-                  strokeWidth={5}
-                >
-                  <Label
-                    content={({ viewBox }) => {
-                      if (viewBox && "cx" in viewBox && "cy" in viewBox) {
-                        return (
-                          <text
-                            x={viewBox.cx}
-                            y={viewBox.cy}
-                            textAnchor="middle"
-                            dominantBaseline="middle"
-                          >
-                            <tspan
+    <div className=''>
+      <div className="home-wrapper flex">
+        <div className="home-left m-[20px] bg-[#f3f3f3] p-[20px] rounded-lg">
+          <Card className="flex flex-col">
+            <CardContent className="flex-1 pb-0">
+              <ChartContainer
+                config={chartConfig}
+                className="mx-auto aspect-square max-h-[250px]"
+              >
+                <PieChart>
+                  <ChartTooltip
+                    cursor={false}
+                    content={<ChartTooltipContent hideLabel />}
+                  />
+                  <Pie
+                    data={chartData}
+                    dataKey="visitors"
+                    nameKey="browser"
+                    innerRadius={60}
+                    strokeWidth={5}
+                  >
+                    <Label
+                      content={({ viewBox }) => {
+                        if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                          return (
+                            <text
                               x={viewBox.cx}
                               y={viewBox.cy}
-                              className="fill-foreground text-3xl font-bold"
+                              textAnchor="middle"
+                              dominantBaseline="middle"
                             >
-                              {totalVisitors.toLocaleString()}
-                            </tspan>
-                            <tspan
-                              x={viewBox.cx}
-                              y={(viewBox.cy || 0) + 24}
-                              className="fill-muted-foreground"
-                            >
-                              Visitors
-                            </tspan>
-                          </text>
-                        );
-                      }
-                    }}
-                  />
-                </Pie>
-              </PieChart>
-            </ChartContainer>
-          </CardContent>
-          <CardFooter className="flex-col gap-2 text-sm">
-            <div className="flex items-center gap-2 font-medium leading-none">
-              Trending up by 5.2% this month{" "}
-              <TrendingUp className="h-4 w-4 text-green-500" />
-            </div>
-          </CardFooter>
-        </Card>
+                              <tspan
+                                x={viewBox.cx}
+                                y={viewBox.cy}
+                                className="fill-foreground text-3xl font-bold"
+                              >
+                                {totalVisitors.toLocaleString()}
+                              </tspan>
+                              <tspan
+                                x={viewBox.cx}
+                                y={(viewBox.cy || 0) + 24}
+                                className="fill-muted-foreground"
+                              >
+                                Visitors
+                              </tspan>
+                            </text>
+                          );
+                        }
+                      }}
+                    />
+                  </Pie>
+                </PieChart>
+              </ChartContainer>
+            </CardContent>
+            <CardFooter className="flex-col gap-2 text-sm">
+              <div className="flex items-center gap-2 font-medium leading-none">
+                Trending up by 5.2% this month{" "}
+                <TrendingUp className="h-4 w-4 text-green-500" />
+              </div>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className="home-right bg-[#f3f3f3] w-[500px] rounded-lg m-[20px] justify-center items-center flex flex-col">
+          <h1 className="text-[30px] font-semibold  text-[#595959] mb-[10px]">
+            Welcome {firstname}
+          </h1>
+          <p className="text-[25px] font-semibold  text-[#595959] w-[400px]">
+            This is your admin panel, here you can have detailed information
+            about your company!
+          </p>
+        </div>
       </div>
-      <div className="home-right text-left">
-        <h1 className="text-[30px] font-semibold  text-[#595959] mb-[10px]">
-          Welcome {firstname}
-        </h1>
-        <p className="text-[25px] font-semibold  text-[#595959] w-[300px]">
-          This is your admin panel, here you can have detailed information about
-          your company!
-        </p>
-      </div>
-    </div>
 
-    <Command className="shadow-md md:min-w-[450px] mt-[50px]">
-      <CommandInput placeholder="Type a command or search..." />
-      <CommandList>
-        <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Suggestions">
-          <CommandItem>
-            <Calendar />
-            <span>Calendar</span>
-          </CommandItem>
-          <CommandItem>
-            <Link to='/invoice'>
-            <span>Invoices</span>
-            </Link>
-          </CommandItem>
-          <CommandItem>
-            <Link to='/products'>
-            <span>Products</span>
-            </Link>
-          </CommandItem>
-          <CommandItem>
-            <Smile />
-            <span>Search Emoji</span>
-          </CommandItem>
-          <CommandItem disabled>
-            <Calculator />
-            <span>Calculator</span>
-          </CommandItem>
-        </CommandGroup>
-        <CommandSeparator />
-        <CommandGroup heading="Settings">
-          <CommandItem>
-            <User />
-            <span>Profile</span>
-            <CommandShortcut>⌘P</CommandShortcut>
-          </CommandItem>
-          <CommandItem>
-            <CreditCard />
-            <span>Billing</span>
-            <CommandShortcut>⌘B</CommandShortcut>
-          </CommandItem>
-          <CommandItem>
-            <Settings />
-            <span>Settings</span>
-            <CommandShortcut>⌘S</CommandShortcut>
-          </CommandItem>
-        </CommandGroup>
-      </CommandList>
-    </Command>
+      <div className="home-mid bg-[#f3f3f3] rounded-lg  items-start justify-center w-[500px] m-auto h-[400px]">
+        <div className="mid-top flex justify-center">
+        <img src='https://img.goodfon.com/original/1728x972/1/2b/eystrahorn-beach-iceland-more-bereg.jpg' className='w-[100%] h-[200px] rounded-xl'/>
+        <Avatar className='h-[150px] w-[150px] absolute mt-[100px]'>
+          <AvatarImage src="https://github.com/shadcn.png"/>
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        </div>
+        <div className="mid-btm mt-[55px] text-center">
+          <p>ADMIN</p>
+          <h1>@{username}</h1>
+        <h1>{email}</h1>
+        <h1>{firstname} {lastname}</h1>
+        </div>
+        
+      </div>
     </div>
   );
 }

@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../style/Signup.css";
 import { Input } from "../components/ui/input";
 import { Button } from "./ui/button";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Signup() {
+  const [username, setUsername] = useState("");
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -14,11 +15,14 @@ export default function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    try{
-      localStorage.setItem("user", JSON.stringify({email, password, firstname}));
+    try {
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ email, password, firstname, lastname, username })
+      );
       alert("Registration successful!");
-      navigate('/login');
-    } catch (err){
+      navigate("/login");
+    } catch (err) {
       setError("Registration failed. Try again.");
     }
   };
@@ -29,7 +33,7 @@ export default function Signup() {
         <h1 className="text-[#0e0e0e] text-[32px] font-bold mt-[80px] mb-[15px] cursor-default">
           Create a New Account
         </h1>
-        {error && <p className='text-red-500'>{error}</p>}
+        {error && <p className="text-red-500">{error}</p>}
         <Input
           type="text"
           placeholder=" Firstname"
@@ -45,12 +49,20 @@ export default function Signup() {
           className="lgn-inp from-indigo-500 outline-none m-[10px] w-[300px] rounded "
         />
         <Input
+          type="text"
+          placeholder=" Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="lgn-inp from-indigo-500 outline-none m-[10px] w-[300px] rounded "
+        />
+        <Input
           type="email"
           placeholder=" Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="lgn-inp from-indigo-500 outline-none m-[10px] w-[300px] rounded "
         />
+
         <Input
           type="password"
           placeholder=" Password"
@@ -69,8 +81,8 @@ export default function Signup() {
         <h1 className="text-[#0e0e0e] text-[20px] font-semibold mt-[20px] cursor-default">
           Already have an account?
         </h1>
-        <Link to='/login'>
-            <h1 className='text-[#4855b7] text-[20px] font-bold '>Login</h1>
+        <Link to="/login">
+          <h1 className="text-[#4855b7] text-[20px] font-bold ">Login</h1>
         </Link>
       </div>
     </div>

@@ -26,6 +26,9 @@
 }
 
 @media (max-width: 768px){
+    .leftbar-item{
+        place-self: center;
+    }
    .leftbar-content{
     text-align: right;
    }

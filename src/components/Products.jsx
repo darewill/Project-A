@@ -44,9 +44,9 @@ export default function Products() {
 
   return (
     <div className='products-wrapper text-[#404040]'>
-      <h1 className='text-3xl mt-[30px] flex justify-center font-semibold'>List of Your Current Selling Products</h1>
+      <h1 className='title text-3xl mt-[30px] flex justify-center font-semibold'>List of Your Current Selling Products</h1>
 
-      <select onChange={(e) => setSortOption(e.target.value)} className="sort-select mt-[40px] left">
+      <select onChange={(e) => setSortOption(e.target.value)} className="select-menu sort-select mt-[40px] left">
         <option value="">Sort Products</option>
         <option value="lowPrice">Price: Ascending</option>
         <option value="highPrice">Price: Descending</option>

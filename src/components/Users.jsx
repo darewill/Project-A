@@ -46,7 +46,7 @@ export default function Users() {
       <h1 className=" m-auto text-[25px] pl-[50px]">List of Users</h1>
       <h1 className="m-[20px] text-[25px] text-[#8d8d8d]">{currentPage}</h1>
       </div>
-      <ul className="columns-2">
+      <ul className="users-cols columns-2">
         {users.map((user) => (
           <li>
             <div className="users-wrapper text-center bg-[#f3f3f3] p-[30px] mb-[20px] rounded-xl hover:bg-[#dbdbdb] transition-colors ">

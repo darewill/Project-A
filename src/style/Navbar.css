@@ -31,6 +31,9 @@
 
 @media (max-width: 768px){
     .navbar-wrapper{
-        width: 100%;
+        
+    }
+    .navbar-items{
+        margin: auto;
     }
 }

@@ -52,12 +52,12 @@ const invoices = [
     totalAmount: "$300.00",
     paymentMethod: "Credit Card",
   },
-]
+] 
 
 export function Invoice() {
   return (
     <Table>
-      <TableCaption className='text-[35px] mb-[50px]'>A list of the recent invoices.</TableCaption>
+      <TableCaption className='title text-[35px] mb-[50px]'>A list of the recent invoices.</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead className="text-left p-[10px] font-bold">Invoice</TableHead>

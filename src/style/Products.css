@@ -29,5 +29,8 @@
     .products-grid{
         grid-template-columns: auto;
     }
+    .select-menu{
+        margin-left:35%;
+    }
 }
 

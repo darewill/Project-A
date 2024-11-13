@@ -129,10 +129,10 @@ export default function Home() {
           </Card>
         </div>
         <div className="home-right bg-[#f3f3f3] w-[500px] rounded-lg m-[20px] justify-center items-center flex flex-col">
-          <h1 className="text-[30px] font-semibold  text-[#2c80eb] mb-[10px]">
+          <h1 className="title text-[30px] font-semibold  text-[#2c80eb] mb-[10px]">
             Welcome {firstname}
           </h1>
-          <p className="text-[25px] font-semibold  text-[#595959] w-[400px]">
+          <p className="desc text-[25px] font-semibold  text-[#595959] w-[400px]">
             This is your admin panel, here you can have detailed information
             about your company!
           </p>

@@ -16,3 +16,17 @@
 .leftbar-item{
     transition: 0.2s ease;
 }
+
+@media (max-width: 1779px){
+    
+}
+
+@media (max-width: 1280px){
+    
+}
+
+@media (max-width: 768px){
+   .leftbar-content{
+    text-align: right;
+   }
+}

@@ -66,3 +66,34 @@ body{
       --chart-4: 280 65% 60%;
       --chart-2: 340 75% 55%;
       }
+
+      @media (max-width: 1779px){
+    
+      }
+      
+      @media (max-width: 1280px){
+          
+      }
+      
+      @media (max-width: 768px){
+        .main-wrapper{
+            
+        }
+         .main-header{
+            margin: auto;
+            position: sticky;
+         }
+         .main-center{
+            width:80%;
+            display: ruby;
+         }
+         .left-bar{
+            text-align: center;
+            width: 75%;
+            height:100%;
+         }
+         .main-content{
+            width: 75%;
+            align-items: center;
+         }
+      }

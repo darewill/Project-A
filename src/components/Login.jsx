@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import "../style/Login.css";
 import { Input } from "../components/ui/input";
 import { Button } from "./ui/button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 
 export default function Login() {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    return <Navigate to="/" />;
+  }
 
   const handleLogin = (e) => {
     e.preventDefault();

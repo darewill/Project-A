@@ -31,8 +31,8 @@ export default function Calendar() {
           {
             id: "1",
             title: "Hiring Day",
-            start: "2024-11-12 16:30",
-            end: "2024-12-16 17:30",
+            start: "2024-12-13 01:30",
+            end: "2024-12-13 03:30",
           },
       ],
     },

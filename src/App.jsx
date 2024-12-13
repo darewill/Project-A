@@ -12,6 +12,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Leftbar from "./components/Leftbar";
 import Users from "./components/Users";
 import Calendar from "./components/Calendar";
+import AuthGuard from "./components/AuthGuard";
 
 function App() {
   const Homepage = () => {
@@ -40,31 +41,59 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: (
+            <AuthGuard>
+              <Home />,
+            </AuthGuard>
+          ),
         },
         {
           path: "/products",
-          element: <Products />,
+          element: (
+            <AuthGuard>
+              <Products />,
+            </AuthGuard>
+          ),
         },
         {
           path: "/posts",
-          element: <Posts />,
+          element: (
+            <AuthGuard>
+              <Posts />,
+            </AuthGuard>
+          ),
         },
         {
           path: "/invoice",
-          element: <Invoice />,
+          element: (
+            <AuthGuard>
+              <Invoice />,
+            </AuthGuard>
+          ),
         },
         {
           path: "/users",
-          element: <Users />,
+          element: (
+            <AuthGuard>
+              <Users />,
+            </AuthGuard>
+          ),
         },
         {
           path: "/visitors",
-          element: <Visitors />,
+          element: (
+            <AuthGuard>
+              <Visitors />,
+            </AuthGuard>
+          ),
         },
         {
           path: "/calendar",
-          element: <Calendar />,
+          element: (
+            <AuthGuard>
+              <Calendar />,
+            </AuthGuard>
+          ),
         },
       ],
     },
